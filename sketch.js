@@ -85,6 +85,10 @@ function draw() {
     
     score = score + Math.round(getFrameRate()/60);
     
+    //calling functions
+    spawnClouds();
+    spawnObstacles();
+    
     //End the game when trex is touching the obstacle
     if(obstaclesGroup.isTouching(trex)){
       //playSound("jump.mp3");
@@ -115,8 +119,7 @@ function draw() {
   }
   
   trex.collide(invisibleGround);
-  spawnClouds();
-  spawnObstacles();
+  
   drawSprites();
 }
 
